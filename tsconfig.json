@@ -8,13 +8,11 @@
     
         // Rules for your code
         "strict": true,
-        "noImplicitAny": true,
+        "noImplicitAny": false,
         "noImplicitReturns": true,
         "noUnusedParameters": true,
         "noUnusedLocals": true,
         "noFallthroughCasesInSwitch": true,
-        "noImplicitOverride": true,
-
         // Settings for linking source files
         "moduleResolution": "node",
         "esModuleInterop": true,
