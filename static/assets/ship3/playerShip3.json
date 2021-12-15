@@ -1,0 +1,44 @@
+{"frames": [
+
+{
+	"filename": "ship3flight1",
+	"frame": {"x":0,"y":0,"w":145,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":40},
+	"sourceSize": {"w":145,"h":40}
+},
+{
+	"filename": "ship3flight2",
+	"frame": {"x":145,"y":0,"w":145,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":40},
+	"sourceSize": {"w":145,"h":40}
+},
+{
+	"filename": "ship3flight3",
+	"frame": {"x":290,"y":0,"w":145,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":40},
+	"sourceSize": {"w":145,"h":40}
+},
+{
+	"filename": "ship3flight4",
+	"frame": {"x":435,"y":0,"w":145,"h":40},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":145,"h":40},
+	"sourceSize": {"w":145,"h":40}
+}],
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "playerShip3.png",
+	"format": "RGBA8888",
+	"size": {"w":580,"h":40},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:072698cfcdae1279b22c14e61348be1f:d71374c27a685bf93c2d160202f5a8fe:e2b88f6dd52a6314a288b6823cd5c6fd$"
+}
+}

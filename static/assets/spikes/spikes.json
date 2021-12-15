@@ -1,0 +1,47 @@
+{"frames": {
+
+"bomb_spikes1.png":
+{
+	"frame": {"x":140,"y":49,"w":33,"h":29},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":47,"y":49,"w":33,"h":29},
+	"sourceSize": {"w":128,"h":128}
+},
+"bomb_spikes2.png":
+{
+	"frame": {"x":140,"y":1,"w":49,"h":46},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":38,"y":40,"w":49,"h":46},
+	"sourceSize": {"w":128,"h":128}
+},
+"bomb_spikes3.png":
+{
+	"frame": {"x":80,"y":1,"w":61,"h":58},
+	"rotated": true,
+	"trimmed": true,
+	"spriteSourceSize": {"x":33,"y":34,"w":61,"h":58},
+	"sourceSize": {"w":128,"h":128}
+},
+"bomb_spikes4.png":
+{
+	"frame": {"x":1,"y":1,"w":77,"h":77},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":25,"y":25,"w":77,"h":77},
+	"sourceSize": {"w":128,"h":128}
+}},
+"animations": {
+	"bomb_spikes": ["bomb_spikes1.png","bomb_spikes2.png","bomb_spikes3.png","bomb_spikes4.png"]
+},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "spikes.png",
+	"format": "RGBA8888",
+	"size": {"w":190,"h":79},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:07670524fb7eb8ffc3e3579f5dc9f4cf:fb3b0e67ddcf9c9beb6a93494719ffec:39654937dd3c7b3d47834ec5fdcdb798$"
+}
+}
