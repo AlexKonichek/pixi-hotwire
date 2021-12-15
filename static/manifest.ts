@@ -21,7 +21,12 @@ export const assets = [
     { name: "background5", url: "assets/backgrounds/original_size/PNG/Space5/Bright/Space5.png" },
     { name: "background6", url: "assets/backgrounds/original_size/PNG/Space6/Bright/Space6.png" },
     //player
+    {name:"fighters", url: "assets/fighters/fighter.json"},
     { name: "playerShip", url: "assets/ship3/playerShip3.json" },
+    { name: "Ship7-1", url: "assets/ships/Ship7/Ship5-1.png" },
+    { name: "Ship7-2", url: "assets/ships/Ship7/Ship5-2.png" },
+    { name: "Ship7-3", url: "assets/ships/Ship7/Ship5-3.png" },
+    { name: "Ship7-4", url: "assets/ships/Ship7/Ship5-4.png" },
 
     //enemies
     
