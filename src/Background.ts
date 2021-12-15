@@ -17,18 +17,17 @@ export class Background {
         }
         return this.BgLayers
     }
+
     createTilling(texture) {
         let tilling = new TilingSprite(texture, 1900,880)
             tilling.position.set(0,0)
             return tilling
-
     }
+
     update() {
         this.BgX = (this.BgX + this.BgSpeed)
         this.BgLayers.children.forEach((element,i) => {
             (element as TilingSprite).tilePosition.x = -(this.BgX/i+1)
         });
-        
-        
 }
 }
