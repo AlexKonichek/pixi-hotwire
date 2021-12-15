@@ -2,15 +2,19 @@
 import { Application} from "@pixi/app";
 import { DisplayObject } from "@pixi/display";
 import * as PIXI from 'pixi.js';
-import { Container, Sprite } from "pixi.js";
+import { Container, Loader, Sprite, TilingSprite } from "pixi.js";
 
 export class Manager {
     private constructor() { /*this class is purely static. No constructor to see here*/ }
 
     // Safely store variables for our game
-    private static app: Application;
+    public static app: Application;
     public static currentScene: IScene;
     public static BGLayerCount: Number = 4;
+    public static BG1
+    public static BG2
+    public static BG3
+    public static BG4
 
 
     // Width and Height are read-only after creation (for now)
@@ -85,8 +89,7 @@ export class Manager {
         Manager.app.stage.addChild(Manager.currentScene);
         console.warn("changeScene: currentScene is", newScene )
 
-        Manager.initSceneBackground(newScene.sceneName)
-        console.warn(newScene.backgroundsWrapper)
+        //Manager.initSceneBackground( ,newScene.sceneName)
 
     }
 
@@ -100,17 +103,13 @@ export class Manager {
 
         // as I said before, I HATE the "frame passed" approach. I would rather use `Manager.app.ticker.deltaMS`
     }
-    public static initSceneBackground(sceneName) {
+    public static initSceneBackground(sceneName, texture) {
         console.log(sceneName)
         if (sceneName !=="loader") {
-            for (let index = 0; index < Manager.BGLayerCount; index++) {
-                let layerContainer = new Container
-                let layer =  Sprite.from(`bg${sceneName}_layer${index+1}`)
-                //layer.zIndex = 4 - index
-                layerContainer.addChild(layer)
-                Manager.currentScene.backgroundsWrapper.addChild(layerContainer)
-            
-        }
+            let tilling = new TilingSprite(texture, 1900,880)
+            tilling.position.set(0,0)
+            Manager.app.stage.addChild(tilling)
+           // return tilling
         }
             
         
@@ -119,14 +118,11 @@ export class Manager {
     
     public static startBGRunning(delta, bgContainer){
         console.log( "startBGRunning");
-       // Manager.app.stage.addChild(bgContainer);
         bgContainer.children.forEach((item: any, i) => {
         Manager.calculateMoving(item, delta, i)
-        //console.log(item, delta);
        })
     }
     private static calculateMoving(bg:Container, delta, i) {
-        //debugger;
         bg.x = bg.x - 4*i * delta;
         if( bg.x < -1920) bg.x = 0
 
@@ -140,5 +136,4 @@ export class Manager {
 export interface IScene extends DisplayObject {
     update(framesPassed: number): void;
     sceneName:String;
-    backgroundsWrapper:Container
 }
