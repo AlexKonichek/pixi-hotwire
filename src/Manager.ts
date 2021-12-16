@@ -5,7 +5,7 @@ import * as PIXI from 'pixi.js';
 import { Container, Loader, Sprite, TilingSprite } from "pixi.js";
 
 export class Manager {
-    private constructor() { }
+    private constructor() {  }
     public static app: Application;
     public static currentScene: IScene;
     private static _width: number;

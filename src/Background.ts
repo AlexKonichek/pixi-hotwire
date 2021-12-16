@@ -3,7 +3,7 @@ import * as PIXI from 'pixi.js';
 export class Background {
     private BgLayers:Container;
     private BgX: number = 0
-    private BgSpeed: number = 30
+    private BgSpeed: number = 10
     private sceneNumber:number;
     constructor(sceneNumber) {
         this.sceneNumber = sceneNumber
@@ -27,7 +27,8 @@ export class Background {
     update() {
         this.BgX = (this.BgX + this.BgSpeed)
         this.BgLayers.children.forEach((element,i) => {
-            (element as TilingSprite).tilePosition.x = -(this.BgX/i+1)
+            (element as TilingSprite).tilePosition.x = -(this.BgX/(this.BgLayers.children.length-i))
+            console.log(i)
         });
 }
 }

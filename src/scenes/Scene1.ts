@@ -1,3 +1,4 @@
+import { Player } from './../Player';
 import { Background } from './../Background';
 
 import { Container, Sprite, Loader, TilingSprite } from "pixi.js";
@@ -5,14 +6,13 @@ import { IScene, Manager } from "../Manager";
 import * as PIXI from 'pixi.js';
 export class Scene1 extends Container implements IScene {
     sceneName:String
-    private ship: Sprite;
+    private ship;
     background
     constructor() {
         super();
-        this.ship = Sprite.from("ship1");
-        this.ship.scale.set(2)
         this.sceneName = "1"
         this.background = new Background(this.sceneName)
+        this.ship = new Player("Ship7-1")
         this.initElements();
     }
     public update(deltaTime: number): void {
@@ -20,9 +20,6 @@ export class Scene1 extends Container implements IScene {
     }
     initElements(){
         this.initBackground()
-        this.ship.anchor.set(0.5);
-        this.ship.x = Manager.width / 2;
-        this.ship.y = Manager.height / 2;
         let texture1 = PIXI.Texture.from("Ship7-1");
         let texture2 = PIXI.Texture.from("Ship7-2");
         let arr = [texture1,texture2]
@@ -32,7 +29,10 @@ export class Scene1 extends Container implements IScene {
         animatedSprite.y = Manager.height / 2;
         animatedSprite.scale.set(2)
         animatedSprite.play()
-        this.initBackground()
+        this.initShip()
+    }
+    initShip(){
+        this.addChild(this.ship.init())
     }
     initBackground(){
          this.addChild(this.background.init())
